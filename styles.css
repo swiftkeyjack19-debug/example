@@ -9,6 +9,7 @@
   --pink-soft: #fbeef4;
   --shadow: 0 8px 24px rgba(224, 183, 198, 0.12);
   --radius: 16px;
+  --hero-image: url("images/hero.jpg");
 }
 
 * {
@@ -109,7 +110,7 @@ a {
   position: relative;
   display: grid;
   align-items: center;
-  background: url("https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=1400&auto=format&fit=crop") center/cover no-repeat;
+  background: var(--hero-image) center/cover no-repeat;
 }
 
 .hero-overlay {
@@ -502,6 +503,40 @@ h2 {
   border: 1px solid var(--line);
 }
 
+.contacts-map--static {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--pink-soft) 0%, #fff 55%, var(--bg-soft) 100%);
+  padding: 32px;
+}
+
+.contacts-map__inner {
+  text-align: center;
+  max-width: 360px;
+}
+
+.contacts-map__title {
+  margin: 0 0 12px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.contacts-map__address {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.45;
+}
+
+.contacts-map__note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.45;
+}
+
 .contacts-form-wrap {
   padding: 38px 34px;
 }
@@ -765,7 +800,7 @@ main .legal-page {
 
 .booking-modal__title {
   margin: 0 0 26px;
-  font-family: "Montserrat", sans-serif;
+  font-family: inherit;
   font-size: clamp(1.6rem, 4vw, 2rem);
   font-weight: 700;
   color: var(--text);
