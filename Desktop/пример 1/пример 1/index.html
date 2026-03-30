@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty Studio - Светлый beauty лендинг</title>
+  <meta name="description" content="Светлый beauty сайт с пастельными акцентами, услугами, галереей, отзывами и формой записи.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <!-- EDIT HERE: Логотип -->
+      <a href="#top" class="logo">Beauty<span>Studio</span></a>
+
+      <button class="menu-toggle" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      <nav class="nav">
+        <a href="#services">Услуги</a>
+        <a href="#advantages">Преимущества</a>
+        <a href="#gallery">Галерея</a>
+        <a href="#portfolio">Портфолио</a>
+        <a href="#team">Команда</a>
+        <a href="#reviews">Отзывы</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero fade-in">
+      <div class="hero-overlay"></div>
+      <div class="container hero-content">
+        <!-- EDIT HERE: Hero текст -->
+        <p class="hero-kicker">Сеть салонов красоты</p>
+        <h1>Забота о вашей красоте в светлой и уютной атмосфере</h1>
+        <p class="hero-subtitle">Современные beauty-процедуры, опытные мастера и мягкий сервис для вашего комфортного преображения.</p>
+        <a href="#" class="btn btn-primary js-open-booking" id="hero-booking-btn">Записаться онлайн</a>
+      </div>
+    </section>
+
+    <section class="promos fade-in">
+      <div class="container">
+        <h2>Акции месяца</h2>
+        <div class="promo-grid">
+          <!-- EDIT HERE: Карточки акций -->
+          <article class="promo-card">
+            <p class="promo-badge">Акция #1</p>
+            <h3>Скидка до 30% на первый визит</h3>
+            <a href="#" class="link-arrow js-service-details" data-service="Акция #1: Скидка до 30% на первый визит" data-description="Скидка действует на первое посещение при предварительной записи через сайт или мессенджер." data-duration="до конца месяца" data-price="выгода до 30%">Подробнее</a>
+          </article>
+          <article class="promo-card">
+            <p class="promo-badge">Акция #2</p>
+            <h3>Подарочный сертификат при записи</h3>
+            <a href="#" class="link-arrow js-service-details" data-service="Акция #2: Подарочный сертификат" data-description="При записи на комплексную услугу вы получаете сертификат, который можно подарить близкому человеку." data-duration="ограниченное предложение" data-price="сертификат в подарок">Подробнее</a>
+          </article>
+          <article class="promo-card">
+            <p class="promo-badge">Акция #3</p>
+            <h3>Комплексные процедуры по спеццене</h3>
+            <a href="#" class="link-arrow js-service-details" data-service="Акция #3: Комплекс по спеццене" data-description="Комбинация популярных процедур в одном визите по сниженной стоимости." data-duration="60-120 минут" data-price="индивидуальный расчет">Подробнее</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="services fade-in" id="services">
+      <div class="container">
+        <div class="section-head">
+          <h2>Услуги</h2>
+          <a href="#" class="link-arrow js-expand-trigger" data-target="#services-list" data-items=".is-extra-service" data-default-text="Все услуги">Все услуги</a>
+        </div>
+        <div class="service-grid" id="services-list">
+          <!-- EDIT HERE: Услуги -->
+          <article class="service-card">
+            <h3>Депиляция</h3>
+            <p>Деликатные процедуры для гладкой кожи с максимально бережным подходом.</p>
+            <div class="service-meta"><span>от 990 ₽</span><a href="#" class="js-service-details" data-service="Депиляция" data-description="Шугаринг, воск и деликатные техники с учетом чувствительности кожи." data-duration="30-60 минут" data-price="от 990 ₽">Подробнее</a></div>
+          </article>
+          <article class="service-card">
+            <h3>Косметология</h3>
+            <p>Современные решения для ровного тона, сияния и естественной свежести.</p>
+            <div class="service-meta"><span>от 1 290 ₽</span><a href="#" class="js-service-details" data-service="Косметология" data-description="Чистки, пилинги и уходовые программы под задачи вашей кожи." data-duration="45-90 минут" data-price="от 1 290 ₽">Подробнее</a></div>
+          </article>
+          <article class="service-card">
+            <h3>Маникюр и педикюр</h3>
+            <p>Уходовые ритуалы и стойкие покрытия в аккуратной эстетике.</p>
+            <div class="service-meta"><span>от 1 100 ₽</span><a href="#" class="js-service-details" data-service="Маникюр и педикюр" data-description="Аппаратные и комбинированные техники, стойкие покрытия и spa-уход." data-duration="60-120 минут" data-price="от 1 100 ₽">Подробнее</a></div>
+          </article>
+          <article class="service-card">
+            <h3>Брови и ресницы</h3>
+            <p>Выразительный взгляд с мягким акцентом на естественную красоту.</p>
+            <div class="service-meta"><span>от 790 ₽</span><a href="#" class="js-service-details" data-service="Брови и ресницы" data-description="Архитектура бровей, ламинирование и уходовые процедуры для выразительного взгляда." data-duration="30-75 минут" data-price="от 790 ₽">Подробнее</a></div>
+          </article>
+          <article class="service-card is-extra is-extra-service">
+            <h3>Визаж</h3>
+            <p>Дневной, вечерний и event-макияж с учетом ваших черт и стилистики образа.</p>
+            <div class="service-meta"><span>от 1 490 ₽</span><a href="#" class="js-service-details" data-service="Визаж" data-description="Подбор макияжа под событие, тип кожи и ваши предпочтения по интенсивности." data-duration="45-80 минут" data-price="от 1 490 ₽">Подробнее</a></div>
+          </article>
+          <article class="service-card is-extra is-extra-service">
+            <h3>Парикмахерские услуги</h3>
+            <p>Стрижки, укладки и уходовые ритуалы для аккуратного и ухоженного вида.</p>
+            <div class="service-meta"><span>от 1 390 ₽</span><a href="#" class="js-service-details" data-service="Парикмахерские услуги" data-description="Стрижки, укладки и восстановление волос в формате консультации и персонального подбора." data-duration="60-120 минут" data-price="от 1 390 ₽">Подробнее</a></div>
+          </article>
+          <article class="service-card is-extra is-extra-service">
+            <h3>Массаж</h3>
+            <p>Расслабляющие и моделирующие техники для красоты и легкости в теле.</p>
+            <div class="service-meta"><span>от 1 690 ₽</span><a href="#" class="js-service-details" data-service="Массаж" data-description="Популярные программы: расслабляющий, лимфодренажный и моделирующий массаж." data-duration="45-90 минут" data-price="от 1 690 ₽">Подробнее</a></div>
+          </article>
+          <article class="service-card is-extra is-extra-service">
+            <h3>Для мужчин</h3>
+            <p>Комплекс процедур для ухода за внешностью в спокойном, комфортном формате.</p>
+            <div class="service-meta"><span>от 1 090 ₽</span><a href="#" class="js-service-details" data-service="Для мужчин" data-description="Специализированные beauty-услуги для мужчин: депиляция, уход, брови, массаж." data-duration="30-90 минут" data-price="от 1 090 ₽">Подробнее</a></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="advantages fade-in" id="advantages">
+      <div class="container">
+        <h2>Почему выбирают нас</h2>
+        <div class="adv-grid">
+          <!-- EDIT HERE: Преимущества -->
+          <article class="adv-item">
+            <div class="icon">✦</div>
+            <h3>Бережные методики</h3>
+            <p>Работаем на качественных материалах и соблюдаем протоколы комфорта.</p>
+          </article>
+          <article class="adv-item">
+            <div class="icon">♡</div>
+            <h3>Заботливый сервис</h3>
+            <p>Погружаем в атмосферу уюта, внимания и индивидуального подхода.</p>
+          </article>
+          <article class="adv-item">
+            <div class="icon">✓</div>
+            <h3>Опытные мастера</h3>
+            <p>Специалисты с практикой и стабильным результатом в каждой процедуре.</p>
+          </article>
+          <article class="adv-item">
+            <div class="icon">☼</div>
+            <h3>Удобная онлайн-запись</h3>
+            <p>Быстрое бронирование, подтверждение визита и напоминание о записи без лишних звонков.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery fade-in" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <h2>Фотогалерея</h2>
+          <a href="#" class="link-arrow js-expand-trigger" data-target="#gallery-list" data-items=".is-extra-gallery" data-default-text="Смотреть все">Смотреть все</a>
+        </div>
+        <div class="gallery-grid" id="gallery-list">
+          <!-- EDIT HERE: Легко заменить изображения -->
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop" alt="Работа мастера 1">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=800&auto=format&fit=crop" alt="Работа мастера 2">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop" alt="Работа мастера 3">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?q=80&w=800&auto=format&fit=crop" alt="Работа мастера 4">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1457972729786-0411a3b2b626?q=80&w=800&auto=format&fit=crop" alt="Работа мастера 5">
+          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?q=80&w=800&auto=format&fit=crop" alt="Работа мастера 6">
+          <img loading="lazy" decoding="async" class="is-extra is-extra-gallery" src="https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=800&auto=format&fit=crop" alt="Работа мастера 7">
+          <img loading="lazy" decoding="async" class="is-extra is-extra-gallery" src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?q=80&w=800&auto=format&fit=crop" alt="Работа мастера 8">
+          <img loading="lazy" decoding="async" class="is-extra is-extra-gallery" src="https://images.unsplash.com/photo-1562322140-8baeececf3df?q=80&w=800&auto=format&fit=crop" alt="Работа мастера 9">
+          <img loading="lazy" decoding="async" class="is-extra is-extra-gallery" src="https://images.unsplash.com/photo-1523263685509-57c1d050d19b?q=80&w=800&auto=format&fit=crop" alt="Работа мастера 10">
+          <img loading="lazy" decoding="async" class="is-extra is-extra-gallery" src="https://images.unsplash.com/photo-1526045612212-70caf35c14df?q=80&w=800&auto=format&fit=crop" alt="Работа мастера 11">
+          <img loading="lazy" decoding="async" class="is-extra is-extra-gallery" src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?q=80&w=800&auto=format&fit=crop" alt="Работа мастера 12">
+        </div>
+      </div>
+    </section>
+
+    <section class="portfolio fade-in" id="portfolio">
+      <div class="container">
+        <div class="section-head">
+          <h2>Портфолио работ</h2>
+          <a href="#" class="link-arrow js-expand-trigger" data-target="#portfolio-list" data-items=".is-extra-portfolio" data-default-text="Смотреть все кейсы">Смотреть все кейсы</a>
+        </div>
+        <div class="portfolio-grid" id="portfolio-list">
+          <!-- EDIT HERE: Портфолио -->
+          <article class="portfolio-card">
+            <div class="portfolio-images">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?q=80&w=800&auto=format&fit=crop" alt="До процедуры 1">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?q=80&w=800&auto=format&fit=crop" alt="После процедуры 1">
+            </div>
+            <div class="portfolio-body">
+              <p class="portfolio-tag">Косметология</p>
+              <h3>Кейс #1: Уход и сияние кожи</h3>
+              <p>Деликатная программа процедур с акцентом на ровный тон и свежий, естественный результат.</p>
+              <p class="portfolio-result">Результат: ровный тон и эффект естественного glow</p>
+              <a href="#" class="link-arrow js-service-details" data-service="Кейс #1: Уход и сияние кожи" data-description="Пошаговый комплекс: диагностика, щадящая чистка, увлажнение и финальный уход." data-duration="60 минут" data-price="по консультации">Хочу похожий результат</a>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-images">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=800&auto=format&fit=crop" alt="До процедуры 2">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?q=80&w=800&auto=format&fit=crop" alt="После процедуры 2">
+            </div>
+            <div class="portfolio-body">
+              <p class="portfolio-tag">Брови и ресницы</p>
+              <h3>Кейс #2: Выразительный взгляд</h3>
+              <p>Комплекс для бровей и ресниц, который мягко подчеркивает черты лица без перегруза.</p>
+              <p class="portfolio-result">Результат: более открытый взгляд и четкая форма бровей</p>
+              <a href="#" class="link-arrow js-service-details" data-service="Кейс #2: Выразительный взгляд" data-description="Подбор формы, окрашивание и укладка с учетом анатомии лица и ваших пожеланий." data-duration="45 минут" data-price="по консультации">Хочу похожий результат</a>
+            </div>
+          </article>
+          <article class="portfolio-card">
+            <div class="portfolio-images">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=800&auto=format&fit=crop" alt="До процедуры 3">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?q=80&w=800&auto=format&fit=crop" alt="После процедуры 3">
+            </div>
+            <div class="portfolio-body">
+              <p class="portfolio-tag">Комплексный уход</p>
+              <h3>Кейс #3: Комплексный beauty-образ</h3>
+              <p>Сочетание ухода, укладки и легкого макияжа для аккуратного и гармоничного финального образа.</p>
+              <p class="portfolio-result">Результат: завершенный образ для события за один визит</p>
+              <a href="#" class="link-arrow js-service-details" data-service="Кейс #3: Комплексный beauty-образ" data-description="Комплексная подготовка под мероприятие: уход, оформление и стилизация." data-duration="90 минут" data-price="по консультации">Хочу похожий результат</a>
+            </div>
+          </article>
+          <article class="portfolio-card is-extra is-extra-portfolio">
+            <div class="portfolio-images">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?q=80&w=800&auto=format&fit=crop" alt="До процедуры 4">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?q=80&w=800&auto=format&fit=crop" alt="После процедуры 4">
+            </div>
+            <div class="portfolio-body">
+              <p class="portfolio-tag">Маникюр</p>
+              <h3>Кейс #4: Ухоженные руки за один визит</h3>
+              <p>Аппаратный маникюр и долговременное покрытие с мягкой коррекцией формы.</p>
+              <p class="portfolio-result">Результат: чистый контур и стойкое покрытие</p>
+              <a href="#" class="link-arrow js-service-details" data-service="Кейс #4: Ухоженные руки" data-description="Комбинация техники и ухода для аккуратного результата на каждый день." data-duration="75 минут" data-price="по консультации">Хочу похожий результат</a>
+            </div>
+          </article>
+          <article class="portfolio-card is-extra is-extra-portfolio">
+            <div class="portfolio-images">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1522337660859-02fbefca4702?q=80&w=800&auto=format&fit=crop" alt="До процедуры 5">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1522338242992-e1a54906a8da?q=80&w=800&auto=format&fit=crop" alt="После процедуры 5">
+            </div>
+            <div class="portfolio-body">
+              <p class="portfolio-tag">Укладка</p>
+              <h3>Кейс #5: Объем и гладкость волос</h3>
+              <p>Процедура восстановления и укладки с акцентом на естественный блеск.</p>
+              <p class="portfolio-result">Результат: ухоженная длина и легкий объем</p>
+              <a href="#" class="link-arrow js-service-details" data-service="Кейс #5: Укладка и восстановление" data-description="Подготовка волос и финишная укладка под ваш стиль." data-duration="90 минут" data-price="по консультации">Хочу похожий результат</a>
+            </div>
+          </article>
+          <article class="portfolio-card is-extra is-extra-portfolio">
+            <div class="portfolio-images">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1503236823255-94609f598e71?q=80&w=800&auto=format&fit=crop" alt="До процедуры 6">
+              <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800&auto=format&fit=crop" alt="После процедуры 6">
+            </div>
+            <div class="portfolio-body">
+              <p class="portfolio-tag">Комплекс</p>
+              <h3>Кейс #6: Подготовка к событию</h3>
+              <p>Комплексный маршрут процедур для гармоничного и свежего внешнего вида.</p>
+              <p class="portfolio-result">Результат: готовый образ без лишнего стресса</p>
+              <a href="#" class="link-arrow js-service-details" data-service="Кейс #6: Подготовка к событию" data-description="Индивидуальный комплекс ухода и оформления за один визит." data-duration="120 минут" data-price="по консультации">Хочу похожий результат</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="team fade-in" id="team">
+      <div class="container">
+        <div class="section-head">
+          <h2>Наша команда</h2>
+          <a href="#" class="link-arrow js-expand-trigger" data-target="#team-list" data-items=".is-extra-team" data-default-text="Все сотрудники">Все сотрудники</a>
+        </div>
+        <div class="team-grid" id="team-list">
+          <!-- EDIT HERE: Сотрудники -->
+          <article class="team-card js-team-card" data-name="Анна Лебедева" data-role="Топ-мастер депиляции" data-age="29 лет" data-exp="6 лет" data-spec="шугаринг и воск" data-about="Работает с чувствительной кожей, подбирает деликатные техники и объясняет каждый этап процедуры.">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1614283233556-f35b0c801ef1?q=80&w=640&auto=format&fit=crop" alt="Специалист 1">
+            <div class="team-body">
+              <h3>Анна Лебедева</h3>
+              <p class="team-role">Топ-мастер депиляции</p>
+              <p>Опыт 6+ лет, деликатный подход и стабильный результат даже в чувствительных зонах.</p>
+              <a href="#" class="link-arrow js-team-details">Подробнее о сотруднике</a>
+            </div>
+          </article>
+          <article class="team-card js-team-card" data-name="Мария Ковалева" data-role="Косметолог-эстетист" data-age="34 года" data-exp="8 лет" data-spec="чистки, пилинги, уходовые протоколы" data-about="Составляет индивидуальные программы и помогает поддерживать результат между визитами.">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=640&auto=format&fit=crop" alt="Специалист 2">
+            <div class="team-body">
+              <h3>Мария Ковалева</h3>
+              <p class="team-role">Косметолог-эстетист</p>
+              <p>Подбирает индивидуальные протоколы ухода и мягко сопровождает к видимому результату.</p>
+              <a href="#" class="link-arrow js-team-details">Подробнее о сотруднике</a>
+            </div>
+          </article>
+          <article class="team-card js-team-card" data-name="Елена Смирнова" data-role="Brow & lash эксперт" data-age="27 лет" data-exp="5 лет" data-spec="архитектура бровей и ламинирование" data-about="Создает естественные формы и балансирует акцент на чертах лица без перегруженного эффекта.">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?q=80&w=640&auto=format&fit=crop" alt="Специалист 3">
+            <div class="team-body">
+              <h3>Елена Смирнова</h3>
+              <p class="team-role">Brow & lash эксперт</p>
+              <p>Создает естественную архитектуру бровей и выразительный взгляд с учетом ваших черт лица.</p>
+              <a href="#" class="link-arrow js-team-details">Подробнее о сотруднике</a>
+            </div>
+          </article>
+          <article class="team-card js-team-card is-extra is-extra-team" data-name="Ольга Романова" data-role="Мастер ногтевого сервиса" data-age="31 год" data-exp="7 лет" data-spec="аппаратный маникюр и педикюр" data-about="Работает аккуратно и быстро, подбирает долговременные покрытия под образ жизни клиента.">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=640&auto=format&fit=crop" alt="Специалист 4">
+            <div class="team-body">
+              <h3>Ольга Романова</h3>
+              <p class="team-role">Мастер ногтевого сервиса</p>
+              <p>Опыт 7 лет, бережный уход за ногтями и идеальная посадка покрытия.</p>
+              <a href="#" class="link-arrow js-team-details">Подробнее о сотруднике</a>
+            </div>
+          </article>
+          <article class="team-card js-team-card is-extra is-extra-team" data-name="Наталья Орехова" data-role="Визажист-стилист" data-age="30 лет" data-exp="9 лет" data-spec="дневной и вечерний макияж" data-about="Подбирает макияж под особенности лица и формат события, создает аккуратные и элегантные образы.">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=640&auto=format&fit=crop" alt="Специалист 5">
+            <div class="team-body">
+              <h3>Наталья Орехова</h3>
+              <p class="team-role">Визажист-стилист</p>
+              <p>Опыт 9 лет, естественные и праздничные образы с учетом пожеланий клиента.</p>
+              <a href="#" class="link-arrow js-team-details">Подробнее о сотруднике</a>
+            </div>
+          </article>
+          <article class="team-card js-team-card is-extra is-extra-team" data-name="Ирина Данилова" data-role="Массажист-эстетист" data-age="36 лет" data-exp="10 лет" data-spec="релакс и лимфодренажные техники" data-about="Комбинирует массажные техники для расслабления, восстановления тонуса и эстетического эффекта.">
+            <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?q=80&w=640&auto=format&fit=crop" alt="Специалист 6">
+            <div class="team-body">
+              <h3>Ирина Данилова</h3>
+              <p class="team-role">Массажист-эстетист</p>
+              <p>Опыт 10 лет, комфортные программы для тела и общего самочувствия.</p>
+              <a href="#" class="link-arrow js-team-details">Подробнее о сотруднике</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews fade-in" id="reviews">
+      <div class="container">
+        <div class="section-head">
+          <h2>Отзывы клиентов</h2>
+          <a href="#" class="link-arrow js-expand-trigger" data-target="#reviews-list" data-items=".is-extra-review" data-default-text="Все отзывы">Все отзывы</a>
+        </div>
+        <div class="review-grid" id="reviews-list">
+          <!-- EDIT HERE: Отзывы -->
+          <article class="review-card">
+            <p>"Очень деликатный сервис, приятная атмосфера и аккуратный результат. Обязательно вернусь."</p>
+            <span>— Клиент #1</span>
+          </article>
+          <article class="review-card">
+            <p>"Понравилось, что все чисто, светло и спокойно. Мастер подробно объяснила каждый этап."</p>
+            <span>— Клиент #2</span>
+          </article>
+          <article class="review-card">
+            <p>"Визуально красивое пространство и высокий уровень сервиса. Комфортно с первой минуты."</p>
+            <span>— Клиент #3</span>
+          </article>
+          <article class="review-card is-extra is-extra-review">
+            <p>"Записалась через сайт за пару минут, администратор быстро подтвердил время. Очень удобно."</p>
+            <span>— Клиент #4</span>
+          </article>
+          <article class="review-card is-extra is-extra-review">
+            <p>"Хожу регулярно к одному мастеру, всегда стабильный результат и приятная атмосфера."</p>
+            <span>— Клиент #5</span>
+          </article>
+          <article class="review-card is-extra is-extra-review">
+            <p>"Понравился подход: сначала консультация, потом процедура. Все понятно и без навязывания."</p>
+            <span>— Клиент #6</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts fade-in" id="contacts">
+      <div class="container contacts-layout">
+        <div class="contacts-map">
+          <!-- EDIT HERE: Карта -->
+          <iframe
+            src="https://yandex.ru/map-widget/v1/?um=constructor%3A31ab953b49583a4a6ec8e5ecf0d9e2d7dfd6a2032411f7ad5f5d8e7bc8ef7d7f&amp;source=constructor"
+            width="100%" height="100%" frameborder="0"
+            title="Карта салона"></iframe>
+        </div>
+        <div class="contacts-form-wrap">
+          <h2>Запись на процедуру</h2>
+          <p>Оставьте контакты, и администратор свяжется с вами для подтверждения.</p>
+          <div class="contact-channels">
+            <!-- EDIT HERE: Контактные каналы -->
+            <a href="mailto:hello@example.com">Почта: hello@example.com</a>
+            <a href="https://t.me/example" target="_blank" rel="noopener noreferrer">Telegram: @example</a>
+            <a href="https://wa.me/70000000000" target="_blank" rel="noopener noreferrer">WhatsApp: +7 (000) 000-00-00</a>
+            <a href="https://instagram.com/example" target="_blank" rel="noopener noreferrer">Instagram: @example</a>
+          </div>
+          <form class="contacts-form" id="booking-form">
+            <!-- EDIT HERE: Контакты и формы -->
+            <input type="text" name="name" placeholder="Ваше имя" required>
+            <input type="tel" name="phone" placeholder="Телефон" required>
+            <select name="service" required>
+              <option value="">Выберите услугу</option>
+              <option>Депиляция</option>
+              <option>Косметология</option>
+              <option>Маникюр/Педикюр</option>
+              <option>Брови/Ресницы</option>
+            </select>
+            <textarea name="message" placeholder="Комментарий"></textarea>
+            <label class="form-consent">
+              <input type="checkbox" required>
+              <span>Я согласен с <a href="#privacy-policy">политикой конфиденциальности</a> и <a href="#personal-data">обработкой персональных данных</a>.</span>
+            </label>
+            <button class="btn btn-primary" type="submit">Отправить заявку</button>
+          </form>
+          <p class="form-success" id="form-success" hidden>Спасибо! Заявка отправлена.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="legal-page fade-in" id="privacy-policy">
+      <div class="container">
+        <article class="legal-card">
+          <!-- EDIT HERE: Политика конфиденциальности -->
+          <h1>Политика конфиденциальности</h1>
+          <p>Настоящая политика конфиденциальности определяет порядок обработки и защиты информации о пользователях сайта.</p>
+
+          <h2>1. Общие положения</h2>
+          <p>Используя сайт, пользователь подтверждает согласие с условиями настоящей политики.</p>
+
+          <h2>2. Какие данные мы собираем</h2>
+          <ul>
+            <li>Имя и телефон, указанные в форме записи.</li>
+            <li>Дополнительные сведения, которые пользователь оставляет в комментарии к заявке.</li>
+            <li>Технические данные (cookie, IP-адрес, данные браузера) для аналитики и улучшения сервиса.</li>
+          </ul>
+
+          <h2>3. Цели обработки</h2>
+          <ul>
+            <li>Связь с пользователем для подтверждения записи.</li>
+            <li>Улучшение качества обслуживания и работы сайта.</li>
+            <li>Исполнение требований законодательства РФ.</li>
+          </ul>
+
+          <h2>4. Защита данных</h2>
+          <p>Мы принимаем необходимые организационные и технические меры для защиты персональных данных от неправомерного доступа.</p>
+
+          <h2>5. Контакты оператора</h2>
+          <p>По вопросам обработки данных: <a href="mailto:hello@example.com">hello@example.com</a></p>
+
+          <p><a class="link-arrow" href="#top">Вернуться на главную</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section class="legal-page fade-in" id="personal-data">
+      <div class="container">
+        <article class="legal-card">
+          <!-- EDIT HERE: Согласие на обработку персональных данных -->
+          <h1>Согласие на обработку персональных данных</h1>
+          <p>Пользователь, оставляя заявку на сайте, выражает согласие на обработку персональных данных на условиях, указанных ниже.</p>
+
+          <h2>1. Перечень данных</h2>
+          <ul>
+            <li>ФИО (или имя), номер телефона, адрес электронной почты (при наличии).</li>
+            <li>Информация, указанная в комментарии к заявке.</li>
+          </ul>
+
+          <h2>2. Действия с данными</h2>
+          <p>Сбор, запись, систематизация, хранение, уточнение, использование, удаление и иные действия, предусмотренные действующим законодательством РФ.</p>
+
+          <h2>3. Цель обработки</h2>
+          <p>Оформление и подтверждение записи, обратная связь с пользователем, предоставление информации об услугах.</p>
+
+          <h2>4. Срок действия согласия</h2>
+          <p>Согласие действует до достижения целей обработки или до момента его отзыва пользователем.</p>
+
+          <h2>5. Отзыв согласия</h2>
+          <p>Пользователь вправе отозвать согласие, направив запрос на адрес: <a href="mailto:hello@example.com">hello@example.com</a></p>
+
+          <p><a class="link-arrow" href="#top">Вернуться на главную</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <!-- EDIT HERE: Footer контакты -->
+      <div>
+        <p class="logo">Beauty<span>Studio</span></p>
+        <p>г. Ваш город, ул. Примерная, 10</p>
+      </div>
+      <div class="footer-links">
+        <a href="tel:+70000000000">+7 (000) 000-00-00</a>
+        <a href="mailto:hello@example.com">hello@example.com</a>
+        <a href="#privacy-policy">Политика конфиденциальности</a>
+        <a href="#personal-data">Обработка персональных данных</a>
+        <a href="https://github.com/swiftkeyjack19-debug/example" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="#top">Наверх ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal booking-modal" id="booking-modal" hidden>
+    <div class="booking-modal__backdrop" data-close-booking></div>
+    <div class="booking-modal__panel" role="dialog" aria-modal="true" aria-labelledby="booking-modal-title">
+      <div class="booking-modal__top">
+        <span class="booking-modal__badge">Запись</span>
+        <button type="button" class="booking-modal__close" data-close-booking aria-label="Закрыть">×</button>
+      </div>
+      <h2 class="booking-modal__title" id="booking-modal-title">Запишитесь онлайн</h2>
+      <form class="booking-modal__form" id="hero-booking-form">
+        <div class="booking-modal__field">
+          <label class="booking-modal__label" for="booking-name">Имя</label>
+          <input class="booking-modal__input" type="text" id="booking-name" name="name" placeholder="Как к вам обращаться?" required autocomplete="name">
+        </div>
+        <div class="booking-modal__field">
+          <label class="booking-modal__label" for="booking-phone">Телефон</label>
+          <input class="booking-modal__input" type="tel" id="booking-phone" name="phone" placeholder="+7 ..." required autocomplete="tel">
+        </div>
+        <div class="booking-modal__field">
+          <label class="booking-modal__label" for="booking-service">Услуга</label>
+          <div class="booking-modal__select-wrap">
+            <select class="booking-modal__select" id="booking-service" name="service" required>
+              <option value="">Выберите услугу</option>
+              <option>Депиляция</option>
+              <option>Косметология</option>
+              <option>Маникюр / педикюр</option>
+              <option>Брови и ресницы</option>
+              <option>Визаж</option>
+              <option>Женская стрижка</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="booking-modal__submit">Отправить заявку</button>
+        <p class="booking-modal__hint">Я согласен с <a href="#privacy-policy">политикой конфиденциальности</a> и <a href="#personal-data">обработкой персональных данных</a>.</p>
+        <p class="booking-modal__success" id="booking-modal-success" hidden>Спасибо! Мы свяжемся с вами в ближайшее время.</p>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal" id="details-modal" hidden>
+    <div class="modal-backdrop" data-close-details></div>
+    <div class="modal-content details-content">
+      <button class="modal-close" type="button" data-close-details aria-label="Закрыть">×</button>
+      <h3 id="details-title"></h3>
+      <p id="details-description"></p>
+      <ul class="details-list">
+        <li><strong>Длительность:</strong> <span id="details-duration"></span></li>
+        <li><strong>Стоимость:</strong> <span id="details-price"></span></li>
+      </ul>
+      <a href="#" class="btn btn-primary js-open-booking" data-close-details>Записаться на консультацию</a>
+    </div>
+  </div>
+
+  <div class="modal" id="team-modal" hidden>
+    <div class="modal-backdrop" data-close-team></div>
+    <div class="modal-content details-content">
+      <button class="modal-close" type="button" data-close-team aria-label="Закрыть">×</button>
+      <h3 id="team-name"></h3>
+      <p id="team-role"></p>
+      <ul class="details-list">
+        <li><strong>Возраст:</strong> <span id="team-age"></span></li>
+        <li><strong>Опыт:</strong> <span id="team-exp"></span></li>
+        <li><strong>Специализация:</strong> <span id="team-spec"></span></li>
+      </ul>
+      <p id="team-about"></p>
+      <a href="#" class="btn btn-primary js-open-booking" data-close-team>Записаться к специалисту</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
