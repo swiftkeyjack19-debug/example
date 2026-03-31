@@ -10,20 +10,12 @@ if (menuButton && nav) {
 }
 
 const faders = document.querySelectorAll(".fade-in");
+faders.forEach((item) => item.classList.add("is-visible"));
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.15 }
-);
-
-faders.forEach((item) => observer.observe(item));
+// Force eager loading so content appears immediately.
+document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+  img.loading = "eager";
+});
 
 const bookingForm = document.querySelector("#booking-form");
 const successMessage = document.querySelector("#form-success");
@@ -197,7 +189,7 @@ if (heroBookingForm && bookingModalSuccess) {
 document.querySelectorAll('a[href="#top"]').forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "auto" });
     const base = `${window.location.pathname}${window.location.search}`;
     if (history.replaceState) {
       history.replaceState(null, "", `${base}#top`);

@@ -15,10 +15,8 @@
   box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: auto;
 }
 
 body {
@@ -928,14 +926,14 @@ main .legal-page {
 }
 
 .fade-in {
-  opacity: 0;
-  transform: translateY(16px);
-  transition: opacity 0.45s ease, transform 0.45s ease;
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 .fade-in.is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
 
 @media (max-width: 992px) {
