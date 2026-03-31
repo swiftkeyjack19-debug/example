@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Beauty Studio - Светлый beauty лендинг</title>
   <meta name="description" content="Светлый beauty сайт с пастельными акцентами, услугами, галереей, отзывами и формой записи.">
+  <script>
+    (function () {
+      if (location.protocol === "file:") return;
+      var p = location.pathname;
+      if (p.endsWith(".html")) {
+        p = p.replace(/[^/]+$/, "");
+      }
+      if (!p.endsWith("/")) {
+        p += "/";
+      }
+      var b = document.createElement("base");
+      b.href = p || "/";
+      document.head.insertBefore(b, document.head.firstChild);
+    })();
+  </script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -28,6 +43,8 @@
 
   <main>
     <section class="hero fade-in">
+      <!-- Фон через img — тот же путь, что у галереи (корректно на GitHub Pages) -->
+      <img class="hero-bg" src="images/hero.jpg" alt="" width="1600" height="900" decoding="async" fetchpriority="high">
       <div class="hero-overlay"></div>
       <div class="container hero-content">
         <!-- EDIT HERE: Hero текст -->
@@ -361,12 +378,21 @@
 
     <section class="contacts fade-in" id="contacts">
       <div class="container contacts-layout">
-        <div class="contacts-map contacts-map--static" aria-label="Адрес салона">
-          <!-- EDIT HERE: при необходимости вставьте ссылку на карту вместо статичного блока -->
-          <div class="contacts-map__inner">
-            <p class="contacts-map__title">Как нас найти</p>
-            <p class="contacts-map__address">г. Ваш город, ул. Примерная, 10</p>
-            <p class="contacts-map__note">Виджет карты отключён — страница не подгружает сторонние сервисы. При желании добавьте ссылку «Открыть на карте» сюда вручную.</p>
+        <div class="contacts-map contacts-map--embed" aria-label="Карта салона">
+          <!-- Надежное встраивание: OSM показывает карту в любых браузерах и webview -->
+          <iframe
+            class="contacts-map__frame"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=37.53%2C55.71%2C37.68%2C55.79&amp;layer=mapnik&amp;marker=55.75%2C37.62"
+            title="Карта салона"></iframe>
+          <div class="contacts-map__bar">
+            <a
+              class="contacts-map__external"
+              href="https://yandex.ru/maps/?text=%D0%B3.%20%D0%92%D0%B0%D1%88%20%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%2C%20%D1%83%D0%BB.%20%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%BD%D0%B0%D1%8F%2C%2010"
+              target="_blank"
+              rel="noopener noreferrer">Открыть в Яндекс.Картах</a>
           </div>
         </div>
         <div class="contacts-form-wrap">

@@ -9,7 +9,6 @@
   --pink-soft: #fbeef4;
   --shadow: 0 8px 24px rgba(224, 183, 198, 0.12);
   --radius: 16px;
-  --hero-image: url("images/hero.jpg");
 }
 
 * {
@@ -110,18 +109,31 @@ a {
   position: relative;
   display: grid;
   align-items: center;
-  background: var(--hero-image) center/cover no-repeat;
+  overflow: hidden;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  pointer-events: none;
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.74));
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   padding: 110px 0 120px;
   max-width: 700px;
 }
@@ -503,38 +515,40 @@ h2 {
   border: 1px solid var(--line);
 }
 
-.contacts-map--static {
+.contacts-map--embed {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(160deg, var(--pink-soft) 0%, #fff 55%, var(--bg-soft) 100%);
-  padding: 32px;
+  flex-direction: column;
+  padding: 0;
+  background: var(--bg-soft);
 }
 
-.contacts-map__inner {
+/* iframe во flex часто схлопывается в 0 по высоте — задаём явную высоту */
+.contacts-map__frame {
+  display: block;
+  width: 100%;
+  height: 480px;
+  min-height: 420px;
+  border: 0;
+  flex: 0 0 auto;
+}
+
+.contacts-map__bar {
+  flex-shrink: 0;
+  background: #fff;
+  border-top: 1px solid var(--line);
+}
+
+.contacts-map__external {
+  display: block;
   text-align: center;
-  max-width: 360px;
+  padding: 14px 16px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  color: var(--pink-strong);
 }
 
-.contacts-map__title {
-  margin: 0 0 12px;
-  font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--text);
-}
-
-.contacts-map__address {
-  margin: 0 0 12px;
-  color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.45;
-}
-
-.contacts-map__note {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.45;
+.contacts-map__external:hover {
+  background: var(--pink-soft);
 }
 
 .contacts-form-wrap {
