@@ -12,11 +12,6 @@ if (menuButton && nav) {
 const faders = document.querySelectorAll(".fade-in");
 faders.forEach((item) => item.classList.add("is-visible"));
 
-// Force eager loading so content appears immediately.
-document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
-  img.loading = "eager";
-});
-
 const bookingForm = document.querySelector("#booking-form");
 const successMessage = document.querySelector("#form-success");
 
